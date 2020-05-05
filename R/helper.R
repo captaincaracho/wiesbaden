@@ -52,18 +52,20 @@ readstr_csv <- function(string,skip=0){
 	}
 
 set_db <- function(db){
-	if (db=="nrw") return("https://www.landesdatenbank.nrw.de/ldbnrwws/services/")
-	if (db=="regio") return("https://www.regionalstatistik.de/genesisws/services/")
-	if (db=="de") return("https://www-genesis.destatis.de/genesisWS/web/")
+	if (db == "nrw") return("https://www.landesdatenbank.nrw.de/ldbnrwws/services/")
+	if (db == "regio") return("https://www.regionalstatistik.de/genesisws/services/")
+	if (db == "de") return("https://www-genesis.destatis.de/genesisWS/web/")
 	if (db == "bm") return("https://www.bildungsmonitoring.de/bildungws/services/")
 	stop("DB: Currently not implemented.")
 	}
 
 
 set_db2 <- function(db){
-	if (db=="de") return("https://www-genesis.destatis.de/genesis/online")
+	if (db == "de") return("https://www-genesis.destatis.de/genesis/online")
 	if (db == "by") return("https://www.statistikdaten.bayern.de/genesis/online")
-   if (db == "regio") return("https://www.regionalstatistik.de/genesis/online/")	
+  if (db == "regio") return("https://www.regionalstatistik.de/genesis/online/")
+  if (db == "nrw") return("https://www.landesdatenbank.nrw.de/ldbnrw/online/")	
+  if (db == "bm") return("https://www.bildungsmonitoring.de/bildung/online/")
 	stop("DB: Currently not implemented.")
 	}
 
